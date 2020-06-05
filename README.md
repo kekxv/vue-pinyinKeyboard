@@ -1,5 +1,9 @@
 # pinyin
 
+拼音输入组件
+
+参考借鉴 ： https://github.com/sxei/pinyinjs
+
 ## Project setup
 ```
 npm install
