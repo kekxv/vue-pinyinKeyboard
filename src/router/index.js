@@ -1,11 +1,8 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-
-Vue.use(VueRouter)
+import { createRouter, createWebHashHistory } from 'vue-router'
 
   const routes = [
   {
-    path: '*',
+    path: '/:pathMatch(.*)*',
     name: 'pinyin',
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
@@ -14,9 +11,8 @@ Vue.use(VueRouter)
   }
 ]
 
-const router = new VueRouter({
-  mode: 'hash',
-  base: process.env.BASE_URL,
+const router = createRouter({
+  history: createWebHashHistory(process.env.BASE_URL),
   routes
 })
 
